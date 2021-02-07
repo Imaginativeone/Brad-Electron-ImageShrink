@@ -1,23 +1,24 @@
 {
-  "name": "Brad-Electron-ImageShrink",
+  "name": "brad-electron-imageshrink",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "App to optimize images",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^11.2.3"
+  },
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Imaginativeone/Brad-Electron-ImageShrink.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Doug Franklin",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Imaginativeone/Brad-Electron-ImageShrink/issues"
   },
-  "homepage": "https://github.com/Imaginativeone/Brad-Electron-ImageShrink#readme",
-  "devDependencies": {
-    "electron": "^11.2.3"
-  }
+  "homepage": "https://github.com/Imaginativeone/Brad-Electron-ImageShrink#readme"
 }
