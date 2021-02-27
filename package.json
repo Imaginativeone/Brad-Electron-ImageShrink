@@ -3,12 +3,9 @@
   "version": "1.0.0",
   "description": "App to optimize images",
   "main": "main.js",
-  "dependencies": {},
-  "devDependencies": {
-    "electron": "^11.2.3"
-  },
   "scripts": {
     "start": "electron .",
+    "dev": "nodemon --exec electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +14,10 @@
   },
   "author": "Doug Franklin",
   "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^11.2.3"
+  },
   "bugs": {
     "url": "https://github.com/Imaginativeone/Brad-Electron-ImageShrink/issues"
   },
