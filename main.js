@@ -1,6 +1,15 @@
 const { app, BrowserWindow } = require('electron');
 
-let mainWindow
+// Set environment
+process.env.NODE_ENV = 'development';
+
+const isDev = process.env.NODE_ENV !== 'production' ? true : false;
+const isMac = process.platform === 'darwin' ? true : false;
+
+console.log('process.platform', process.platform);
+console.log('isMac', isMac);
+
+let mainWindow;
 
 function createMainWindow() {
 
@@ -9,8 +18,9 @@ function createMainWindow() {
     title: 'ImageShrink',
     width: 500,
     height: 600,
-
     icon: './assets/icons/Icon_256x256.png',
+
+    resizable: isDev ? false : true,
 
     webPreferences: { contextIsolation: true }
 
@@ -30,6 +40,11 @@ app.on('window-all-closed', () => {
   }
 })
 
+app.on('activate', () => {
+  if (BrowserWindow.getAllWindows().length === 0) {
+    createMainWindow()
+  }
+})
 
 // const { app, BrowserWindow } = require('electron')
 
