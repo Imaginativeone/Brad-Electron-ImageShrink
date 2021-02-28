@@ -43,20 +43,25 @@ app.on('ready', () => {
 
 });
 
-const menu = [{
+const menu = [
+  
+  ...(isMac ? [{ role: 'appMenu' }] : []),
+
+  {
 
   label: 'File',
   submenu: [{
-
     label: 'Quit',
+    // accelerator: isMac ? 'Command+W' : 'Ctrl+W',
+    accelerator: 'CmdOrCtrl+W',
     click: () => app.quit()
-
   }]
+
 }];
 
-if (isMac) {
-  menu.unshift({ role: 'appMenu' });
-}
+// if (isMac) {
+//   menu.unshift({ role: 'appMenu' });
+// }
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
